@@ -1,0 +1,18 @@
+<div ng-controller="AddMessageController as vm">
+  <h1 style="text-align: center;">MESSAGES</h1>
+  <form class="well container" ng-submit="vm.saveMessage()">
+  <input class="form-control" placeholder="Message..." ng-model="vm.addMessage.text" />
+  <div style="text-align: center">
+    <button type="submit"class="btn btn-success" style="margin: 10px">Submit</button>
+  </div>
+  </form>
+</div>
+<div ng-controller="MainController as vm">
+
+
+  <div ng-repeat="c in vm.messages">
+    <div class="well container">
+      <h3>{{c.text}}</h3>
+    </div>
+  </div>
+</div>
