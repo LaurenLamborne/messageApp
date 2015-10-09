@@ -1,18 +1,22 @@
-<div ng-controller="AddMessageController as vm">
-  <h1 style="text-align: center;">MESSAGES</h1>
-  <form class="well container" ng-submit="vm.saveMessage()">
-  <input class="form-control" placeholder="Message..." ng-model="vm.addMessage.text" />
-  <div style="text-align: center">
-    <button type="submit"class="btn btn-success" style="margin: 10px">Submit</button>
-  </div>
-  </form>
-</div>
 <div ng-controller="MainController as vm">
 
+  <h1 style="text-align: center;">MESSAGES</h1>
+  <form class="well container" ng-submit="vm.saveMessage()">
+    <textarea class="form-control" placeholder="Message..." ng-model="vm.addMessage.text"> </textarea>
+    <div style="text-align: center">
+      <button type="submit"class="btn btn-success" style="margin: 10px">SUBMIT MESSAGE</button>
+    </div>
+  </form>
+  <form >
+    <div style="text-align: center">
+      <button type="button" class="btn btn-primary" ng-click="vm.runMessages();" >click me</a>
+        <button type="button" class="btn btn-danger" style="margin: 10px" ng-click="vm.endMessages()">END</button>
+      </div>
+    </form>
 
-  <div ng-repeat="c in vm.messages">
-    <div class="well container">
-      <h3>{{c.text}}</h3>
+    <div ng-repeat="c in vm.messages">
+      <div class="well container">
+        <h3>{{c.text}}</h3>
+      </div>
     </div>
   </div>
-</div>
